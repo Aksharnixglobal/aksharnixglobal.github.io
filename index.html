@@ -2,241 +2,549 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>(function(){try{const t=localStorage.getItem('theme');if(t==='dark'){document.documentElement.classList.add('dark');}}catch(e){}})();</script>
   <title>AksharNix Global — IT Staffing & Consulting</title>
-  <meta name="description" content="AksharNix Global — Trusted IT staffing and consulting. Cloud, DevOps, Security, Data." />
-  <link rel="icon" href="/favicon.ico" />
+  <meta name="description" content="AksharNix Global is a DFW-based IT staffing partner. Contract, contract-to-hire, and direct hire across QA, DevOps, Cloud, Data, Cybersecurity, and more." />
+  <meta property="og:image" content="https://aksharnixglobal.com/akshar_nix_logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="/favicon.png" />
+  <link rel="icon" type="image/png" href="/logo.png" />
+  <!-- Fonts --><!-- Tailwind CSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eaf3f9',
+              100: '#d6e6f3',
+              200: '#a7c6da',
+              300: '#86b2cd',
+              400: '#6192b9',
+              500: '#3f7fb0',
+              600: '#1682b8',
+              700: '#0f5f97',
+              800: '#074687',
+              900: '#063c73'
+            }
+          },
+          boxShadow: {
+            soft: '0 8px 30px rgba(2, 6, 23, 0.10)'
+          }
+        }
+      }
+    }
+  </script>
+  <script>window.AKX_LOGO_URL='/akshar_nix_logo.png?v=1';</script>
   <style>
-    /* ---------- Brand colors ---------- */
-    :root{
-      --brand-900:#063c73;
-      --brand-800:#074687;
-      --brand-700:#0f5f97;
-      --brand-600:#1682b8;
-      --brand-500:#3f7fb0;
-      --bg:#061523; /* deep navy */
-      --card:#ffffff;
-      --muted:#94a3b8;
-      --glass: rgba(255,255,255,0.85);
-    }
-    /* ---------- Reset & base ---------- */
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family: system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial;
-      color:#0f1724;
-      background: linear-gradient(180deg, #031227 0%, #042136 60%, #081827 100%);
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height:1.3;
-    }
-    a{color:inherit;text-decoration:none}
-    img{max-width:100%;display:block}
-    /* ---------- Layout ---------- */
-    .container{max-width:1180px;margin:0 auto;padding:28px}
-    header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
-    .logo{display:flex;align-items:center;gap:12px}
-    .logo img{height:44px;width:auto}
-    .nav-actions{display:flex;gap:12px;align-items:center}
-    .btn{display:inline-block;padding:12px 18px;border-radius:10px;font-weight:600;border:1px solid rgba(255,255,255,0.08)}
-    .btn-primary{background:linear-gradient(90deg,var(--brand-700),var(--brand-600));color:white;box-shadow:0 8px 24px rgba(11,55,95,0.35)}
-    .btn-outline{background:transparent;color:rgba(255,255,255,0.92);border:1px solid rgba(255,255,255,0.12)}
-    /* ---------- Hero ---------- */
-    .hero{
-      display:grid;
-      grid-template-columns:1fr 420px;
-      gap:28px;
-      align-items:center;
-      padding:56px 0;
-    }
-    .hero-left{color:var(--glass);padding-right:18px}
-    .eyebrow{font-size:13px;color:var(--muted);margin-bottom:12px}
-    .headline{
-      font-size:44px;
-      line-height:1.03;
-      color: #ffffff;
-      margin:0 0 18px 0;
-      font-weight:800;
-      letter-spacing:-0.02em;
-    }
-    .subtext{color:rgba(255,255,255,0.82);margin:0 0 22px 0;max-width:62ch}
-    .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
-    /* ---------- Right column (panel) ---------- */
-    .panel{
-      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
-      border-radius:16px;
-      padding:20px;
-      border:1px solid rgba(255,255,255,0.06);
-      backdrop-filter: blur(6px);
-      color:#fff;
-    }
-    .candidate{display:flex;align-items:center;justify-content:space-between;padding:14px;border-radius:10px;background:rgba(255,255,255,0.02);margin-bottom:10px}
-    .candidate-left{display:flex;align-items:center;gap:12px}
-    .avatar{height:44px;width:44px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(180deg,var(--brand-100, #eaf3f9),var(--brand-300, #86b2cd));color:var(--brand-900);font-weight:700}
-    .cand-title{font-weight:700;color:white}
-    .cand-meta{font-size:13px;color:var(--muted)}
-    .badge{background:rgba(255,255,255,0.06);color:white;padding:6px 10px;border-radius:999px;font-size:13px}
-    /* ---------- Services ---------- */
-    .services{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:32px}
-    .svc{padding:18px;border-radius:12px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.04);display:flex;gap:12px;align-items:flex-start}
-    .svc svg{height:34px;width:34px;color:#cfe9ff;margin-top:2px}
-    .svc h4{margin:0;font-size:16px;color:#fff;font-weight:700}
-    .svc p{margin:6px 0 0 0;color:var(--muted);font-size:13px}
-    /* ---------- Footer strip ---------- */
-    footer{margin-top:48px;padding:28px;border-top:1px solid rgba(255,255,255,0.03);color:rgba(255,255,255,0.85)}
-    .footer-grid{display:flex;justify-content:space-between;align-items:center;gap:12px}
-    /* ---------- Responsive ---------- */
-    @media (max-width:980px){
-      .hero{grid-template-columns:1fr; padding:36px 0}
-      .panel{order:2;margin-top:14px}
-      .services{grid-template-columns:repeat(2,1fr)}
-      .headline{font-size:36px}
-    }
-    @media (max-width:520px){
-      .services{grid-template-columns:1fr}
-      header{padding-top:12px;padding-bottom:12px}
-      .logo img{height:36px}
-      .headline{font-size:28px}
-    }
+    /* Smooth scroll */
+    html{scroll-behavior:smooth}
+    /* Modern brand font */
+    body{font-family:'Manrope',ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,'Apple Color Emoji','Segoe UI Emoji';}
+    /* Fancy helpers */
+    .glass{background:rgba(255,255,255,.65);backdrop-filter:saturate(140%) blur(10px);border:1px solid rgba(255,255,255,.35)}
+    .lift{transition:transform .2s ease, box-shadow .2s ease}
+    .lift:hover{transform:translateY(-2px)}
+    .reveal{opacity:0;transform:translateY(8px);transition:opacity .5s ease,transform .5s ease}
+    .reveal.show{opacity:1;transform:none}
+    /* marquee */
+    .marquee{display:flex;gap:2.5rem;white-space:nowrap;animation:scroll 30s linear infinite}
+    .marquee:hover{animation-play-state:paused}
+    @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
   </style>
+  <style>
+    @keyframes spin-slow{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+    .spin-slow{animation:spin-slow 40s linear infinite}
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
-<body>
-  <div class="container">
-    <header>
-      <div class="logo">
-        <!-- Put your logo file at /akshar_nix_logo.png -->
-        <img src="/akshar_nix_logo.png" alt="Aksharnix Global logo" onerror="this.style.display='none'; document.getElementById('logoText').style.display='block'"/>
-        <div id="logoText" style="display:none;color:white;font-weight:700">AksharNix <span style="font-weight:600;color:#bcd8f7">GLOBAL</span></div>
+<body class="bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-100">
+  <!-- Top Bar -->
+  <div class="hidden md:block bg-brand-900 text-white text-sm">
+    <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <span>📍 DFW-based • Nationwide placements</span>
+        <span class="hidden lg:inline">E-Verify • W‑2 • C2C • 1099 • Background checks</span>
       </div>
-      <div class="nav-actions">
-        <a class="btn btn-outline" href="#contact">Submit Resume</a>
-        <a class="btn btn-primary" href="#contact">Hire Talent</a>
+      <div class="flex items-center gap-6">
+        <a href="tel:+12012221122" class="hover:underline">Call: (201) 222‑1122</a>
+        <a href="mailto:admin@aksharnixglobal.com?subject=Inquiry%20from%20Website" class="hover:underline">admin@aksharnixglobal.com</a>
       </div>
-    </header>
-
-    <!-- HERO -->
-    <section class="hero">
-      <div class="hero-left">
-        <div class="eyebrow">Trusted IT staffing & consulting — DFW & nationwide</div>
-        <h1 class="headline">Global IT Consulting & Staffing That Works</h1>
-        <p class="subtext">Secure. Scalable. Reliable solutions for Cloud, DevOps, Security, and Data. We place vetted candidates fast so your team keeps moving.</p>
-
-        <div class="cta-row">
-          <a class="btn btn-primary" href="#contact">Hire Talent</a>
-          <a class="btn btn-outline" href="#seekers">Submit Resume</a>
-        </div>
-
-        <!-- quick stats -->
-        <div style="display:flex;gap:12px;margin-top:20px;flex-wrap:wrap">
-          <div style="background:rgba(255,255,255,0.03);padding:10px 12px;border-radius:10px;color:white;font-weight:700">48–72h Shortlists</div>
-          <div style="background:rgba(255,255,255,0.03);padding:10px 12px;border-radius:10px;color:white;font-weight:700">Compliance-first</div>
-          <div style="background:rgba(255,255,255,0.03);padding:10px 12px;border-radius:10px;color:white;font-weight:700">DFW roots, nationwide reach</div>
-        </div>
-      </div>
-
-      <!-- Right panel: featured talent / snapshots -->
-      <aside class="panel" aria-label="Featured candidates">
-        <div style="font-size:14px;font-weight:700;color:rgba(255,255,255,0.9);margin-bottom:8px">Featured talent</div>
-
-        <div class="candidate" role="article">
-          <div class="candidate-left">
-            <div class="avatar">QA</div>
-            <div>
-              <div class="cand-title">SDET — API / Playwright</div>
-              <div class="cand-meta">8 yrs • Austin • 2-week notice</div>
-            </div>
-          </div>
-          <div class="badge">Available</div>
-        </div>
-
-        <div class="candidate" role="article">
-          <div class="candidate-left">
-            <div class="avatar">DV</div>
-            <div>
-              <div class="cand-title">DevOps Engineer (AWS/Terraform)</div>
-              <div class="cand-meta">6 yrs • Plano • Immediate</div>
-            </div>
-          </div>
-          <div class="badge">Top match</div>
-        </div>
-
-        <div class="candidate" role="article">
-          <div class="candidate-left">
-            <div class="avatar">DE</div>
-            <div>
-              <div class="cand-title">Data Engineer — DBT / Snowflake</div>
-              <div class="cand-meta">7 yrs • Remote • 1-week notice</div>
-            </div>
-          </div>
-          <div class="badge">Hotlist</div>
-        </div>
-
-        <div style="height:8px"></div>
-        <div style="font-size:13px;color:var(--muted)">Want references? <a href="mailto:admin@aksharnixglobal.com" style="color:#bfe0ff">Request client references</a></div>
-      </aside>
-    </section>
-
-    <!-- SERVICES -->
-    <section aria-label="Services">
-      <div class="services" role="list">
-        <div class="svc" role="listitem">
-          <!-- server icon -->
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden><rect x="3" y="4" width="18" height="6" rx="1.5" stroke="currentColor" stroke-width="1.6"/><rect x="3" y="14" width="18" height="6" rx="1.5" stroke="currentColor" stroke-width="1.6"/></svg>
-          <div>
-            <h4>Infrastructure Support</h4>
-            <p>Secure. Scalable. Reliable.</p>
-          </div>
-        </div>
-
-        <div class="svc" role="listitem">
-          <!-- cloud-lock icon -->
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden><path d="M7 18h10a3 3 0 0 0 0-6 5 5 0 0 0-9.9-1.4" stroke="currentColor" stroke-width="1.6"/><rect x="11" y="13" width="4" height="4" rx="1" stroke="currentColor" stroke-width="1.6"/></svg>
-          <div>
-            <h4>Cloud & Security</h4>
-            <p>Compliance-focused cloud practices.</p>
-          </div>
-        </div>
-
-        <div class="svc" role="listitem">
-          <!-- gears -->
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden><path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" stroke="currentColor" stroke-width="1.6"/><path d="M19 12v.5M5 12v.5M12 5h.5M12 19h.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-          <div>
-            <h4>DevOps & Automation</h4>
-            <p>CI/CD, Platform, Infra-as-Code.</p>
-          </div>
-        </div>
-
-        <div class="svc" role="listitem">
-          <!-- chart -->
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden><path d="M4 20h16" stroke="currentColor" stroke-width="1.6"/><path d="M7 14v6M12 9v11M17 5v15" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-          <div>
-            <h4>Data & Analytics</h4>
-            <p>ETL, warehousing, BI & analytics.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-      <div class="footer-grid">
-        <div style="font-weight:700;color:white">AksharNix Global</div>
-        <div style="text-align:right">
-          <div>admin@aksharnixglobal.com</div>
-          <div style="margin-top:6px">(201) 222-1122</div>
-        </div>
-      </div>
-    </footer>
+    </div>
   </div>
 
-  <!-- small accessibility/UX script -->
+  <!-- Navbar -->
+  <header class="sticky top-0 z-50 bg-white/90 dark:bg-slate-950/80 backdrop-blur lift border-b border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <img id="brandLogo" src="" alt="AksharNix Global logo" class="h-9 w-auto hidden" />
+        <div id="brandFallback" class="hidden h-9 w-9 bg-slate-900 text-white grid place-items-center text-xs font-bold">AN</div>
+        <span class="font-extrabold tracking-tight text-slate-900 dark:text-white text-lg">AksharNix Global</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-7 text-sm">
+        <a href="#employers" class="hover:text-brand-700">Employers</a>
+        <a href="#seekers" class="hover:text-brand-700">Job Seekers</a>
+        <a href="#roles" class="hover:text-brand-700">Roles We Staff</a>
+        <a href="#process" class="hover:text-brand-700">Process</a>
+        <a href="#why-us" class="hover:text-brand-700">Why Us</a>
+        <a href="#contact" class="hover:text-brand-700">Contact</a>
+      </nav>
+      <div class="hidden md:flex items-center gap-3">
+        <button id="themeToggle" title="Toggle theme" class="inline-flex items-center justify-center w-10 h-10 rounded-xl border border-slate-300 dark:border-slate-700/70 hover:bg-slate-50 dark:border-white/20 dark:hover:bg-white/10">🌙</button>
+        <a href="#contact" class="px-4 py-2 rounded-xl border border-slate-300 dark:border-slate-700 hover:bg-slate-50">Hire Talent</a>
+        <a href="#seekers" class="px-4 py-2 rounded-xl bg-gradient-to-r from-brand-700 to-brand-600 hover:from-brand-800 hover:to-brand-700 text-white shadow-soft">Submit Resume</a>
+      </div>
+      <button id="menuBtn" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-slate-300 dark:border-slate-700" aria-label="Open menu">☰</button>
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 bg-white">
+      <div class="px-4 py-3 flex flex-col gap-3 text-sm">
+        <a href="#employers" class="py-2">Employers</a>
+        <a href="#seekers" class="py-2">Job Seekers</a>
+        <a href="#roles" class="py-2">Roles We Staff</a>
+        <a href="#process" class="py-2">Process</a>
+        <a href="#why-us" class="hover:text-brand-700">Why Us</a>
+        <a href="#contact" class="py-2">Contact</a>
+        <div class="flex gap-2 pt-2">
+          <a href="#contact" class="flex-1 px-4 py-2 rounded-xl border border-slate-300 dark:border-slate-700 text-center">Hire Talent</a>
+          <a href="#seekers" class="flex-1 px-4 py-2 rounded-xl bg-brand-600 text-white text-center">Submit Resume</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <!-- soft gradient + animated blobs -->
+    <div class="absolute inset-0 bg-gradient-to-br from-brand-50 via-white to-white dark:from-slate-900 dark:via-slate-950 dark:to-slate-950"></div>
+    <div class="pointer-events-none absolute -top-20 -right-24 w-[38rem] h-[38rem] rounded-full bg-gradient-to-tr from-brand-200 to-brand-400 blur-3xl opacity-40 dark:opacity-20"></div>
+    <div class="pointer-events-none absolute -bottom-24 -left-24 w-[30rem] h-[30rem] rounded-full bg-gradient-to-tr from-brand-100 to-brand-300 blur-3xl opacity-50 dark:opacity-25"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 py-20 md:py-28 grid md:grid-cols-2 gap-10 items-center">
+      <div class="reveal">
+        <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">
+          IT Staffing that just <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-800 to-brand-600">works</span>.
+        </h1>
+        <p class="mt-5 text-lg text-slate-600 dark:text-slate-400 dark:text-slate-300 max-w-xl">Contract, contract‑to‑hire, and direct‑hire talent for QA, DevOps, Cloud, Data, Security, and more. Shortlists in 48–72 hours. Local to DFW, placing nationwide.</p>
+        <div class="mt-7 flex flex-col sm:flex-row gap-3">
+          <a href="#contact" class="px-6 py-3 rounded-xl text-white bg-gradient-to-r from-brand-700 to-brand-600 hover:from-brand-800 hover:to-brand-700 shadow-lg">Hire Talent</a>
+          <a href="#seekers" class="px-6 py-3 rounded-xl border border-slate-300 dark:border-slate-700 dark:border-slate-700 dark:text-slate-100 hover:bg-gradient-to-b from-white via-brand-50/40 to-white dark:hover:bg-slate-900">Submit Resume</a>
+        </div>
+        <div class="mt-6 text-sm text-slate-500 dark:text-slate-400">E‑Verify • W‑2 • C2C • 1099 • Compliance‑first</div>
+
+        <!-- small glass stats -->
+        <div class="mt-6 grid grid-cols-3 max-w-lg gap-3">
+          <div class="glass rounded-xl px-4 py-3 text-center text-sm"><div class="font-extrabold text-slate-900 dark:text-white">48–72h</div><div class="text-slate-600 dark:text-slate-400 dark:text-slate-300">Shortlists</div></div>
+          <div class="glass rounded-xl px-4 py-3 text-center text-sm"><div class="font-extrabold text-slate-900 dark:text-white">IT‑only</div><div class="text-slate-600 dark:text-slate-400 dark:text-slate-300">Focus</div></div>
+          <div class="glass rounded-xl px-4 py-3 text-center text-sm"><div class="font-extrabold text-slate-900 dark:text-white">Nationwide</div><div class="text-slate-600 dark:text-slate-400 dark:text-slate-300">Reach</div></div>
+        </div>
+      </div>
+      <div class="relative reveal">
+        <div class="rounded-2xl glass p-5 shadow-soft">
+          <!-- Talent snapshots (replaces globe visual) -->
+          <div class="grid gap-3 mb-5">
+            <div class="p-4 rounded-xl bg-white/85 dark:bg-slate-900/70 flex items-center justify-between lift">
+              <div class="flex items-center gap-3">
+                <div class="h-10 w-10 rounded-full bg-brand-600/10 text-brand-700 grid place-items-center font-extrabold">QA</div>
+                <div>
+                  <div class="font-semibold text-slate-900">SDET (API / Playwright)</div>
+                  <div class="text-xs text-slate-500 dark:text-slate-400">8 yrs • Austin • 2‑week notice</div>
+                </div>
+              </div>
+              <span class="text-xs px-2 py-1 rounded-full bg-brand-50 text-brand-700">Available</span>
+            </div>
+            <div class="p-4 rounded-xl bg-white/85 dark:bg-slate-900/70 flex items-center justify-between lift">
+              <div class="flex items-center gap-3">
+                <div class="h-10 w-10 rounded-full bg-brand-600/10 text-brand-700 grid place-items-center font-extrabold">DV</div>
+                <div>
+                  <div class="font-semibold text-slate-900">DevOps Engineer (AWS/Terraform)</div>
+                  <div class="text-xs text-slate-500 dark:text-slate-400">6 yrs • Plano • Immediate</div>
+                </div>
+              </div>
+              <span class="text-xs px-2 py-1 rounded-full bg-brand-50 text-brand-700">Top match</span>
+            </div>
+            <div class="p-4 rounded-xl bg-white/85 dark:bg-slate-900/70 flex items-center justify-between lift">
+              <div class="flex items-center gap-3">
+                <div class="h-10 w-10 rounded-full bg-brand-600/10 text-brand-700 grid place-items-center font-extrabold">DE</div>
+                <div>
+                  <div class="font-semibold text-slate-900">Data Engineer (DBT / Snowflake)</div>
+                  <div class="text-xs text-slate-500 dark:text-slate-400">7 yrs • Remote • 1‑week notice</div>
+                </div>
+              </div>
+              <span class="text-xs px-2 py-1 rounded-full bg-brand-50 text-brand-700">Hotlist</span>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-4 text-sm">
+            <div class="p-4 rounded-xl bg-white/60 dark:bg-slate-900/60"><div class="font-semibold text-slate-900">QA & SDET</div><div class="text-slate-600 dark:text-slate-400 dark:text-slate-300">Functional • Automation • API</div></div>
+            <div class="p-4 rounded-xl bg-white/60 dark:bg-slate-900/60"><div class="font-semibold text-slate-900">DevOps & Platform</div><div class="text-slate-600 dark:text-slate-400 dark:text-slate-300">K8s • CI/CD • Terraform</div></div>
+            <div class="p-4 rounded-xl bg-white/60 dark:bg-slate-900/60"><div class="font-semibold text-slate-900">Cloud & Security</div><div class="text-slate-600 dark:text-slate-400 dark:text-slate-300">AWS • Azure • GCP • SecOps</div></div>
+            <div class="p-4 rounded-xl bg-white/60 dark:bg-slate-900/60"><div class="font-semibold text-slate-900">Data & Analytics</div><div class="text-slate-600 dark:text-slate-400 dark:text-slate-300">ETL • Warehousing • BI</div></div>
+          </div>
+          <div class="mt-4 text-xs text-slate-500 dark:text-slate-400">Plus: Network • Help Desk • PM/BA • Full‑Stack • Mobile</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <section class="py-6 border-y border-white/30 dark:border-white/10 bg-white/60 dark:bg-slate-900/60 backdrop-blur">
+    <div class="max-w-7xl mx-auto px-4 flex flex-wrap items-center justify-center gap-x-10 gap-y-3 text-slate-500 dark:text-slate-400 text-sm">
+      <span>Trusted by teams across DFW & US</span>
+      <span class="inline-block w-20 h-[1px] bg-slate-200"></span>
+      <span>Background‑checked candidates</span>
+      <span class="inline-block w-20 h-[1px] bg-slate-200"></span>
+      <span>Interview‑ready shortlists</span>
+    </div>
+  </section>
+
+  <!-- Logo Marquee (optional) -->
+  <section class="py-8 border-y border-white/30 dark:border-white/10 bg-white/60 dark:bg-slate-900/60 backdrop-blur">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="overflow-hidden">
+        <div class="marquee text-slate-500 dark:text-slate-400">
+          <span class="text-sm">Trusted by teams in DFW</span>
+          <span>•</span>
+          <span class="text-sm">Healthcare</span>
+          <span>•</span>
+          <span class="text-sm">Telecom</span>
+          <span>•</span>
+          <span class="text-sm">Retail</span>
+          <span>•</span>
+          <span class="text-sm">Fintech</span>
+          <span>•</span>
+          <span class="text-sm">Manufacturing</span>
+          <span>•</span>
+          <span class="text-sm">SaaS</span>
+          <span>•</span>
+          <span class="text-sm">Public Sector</span>
+          <span>•</span>
+          <span class="text-sm">and more</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Roles We Staff -->
+  <section id="roles" class="py-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-end justify-between gap-6 flex-wrap">
+        <h2 class="text-2xl md:text-3xl font-extrabold">Roles we staff</h2>
+        <a href="#contact" class="text-brand-700 hover:underline text-sm">Need a role not listed? Talk to us →</a>
+      </div>
+      <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <!-- chips -->
+        <div class="p-5 rounded-2xl border border-white/30 dark:border-white/10 bg-white/70 dark:bg-slate-900/60 backdrop-blur lift"><div class="font-semibold">QA / SDET</div><div class="text-slate-600 dark:text-slate-400 text-sm">Manual, Automation, API, Performance</div></div>
+        <div class="p-5 rounded-2xl border border-white/30 dark:border-white/10 bg-white/70 dark:bg-slate-900/60 backdrop-blur lift"><div class="font-semibold">DevOps / Platform</div><div class="text-slate-600 dark:text-slate-400 text-sm">Kubernetes, Docker, CI/CD, Terraform</div></div>
+        <div class="p-5 rounded-2xl border border-white/30 dark:border-white/10 bg-white/70 dark:bg-slate-900/60 backdrop-blur lift"><div class="font-semibold">Cloud Engineering</div><div class="text-slate-600 dark:text-slate-400 text-sm">AWS, Azure, GCP, Networking</div></div>
+        <div class="p-5 rounded-2xl border border-white/30 dark:border-white/10 bg-white/70 dark:bg-slate-900/60 backdrop-blur lift"><div class="font-semibold">Data Engineering</div><div class="text-slate-600 dark:text-slate-400 text-sm">ETL, Warehousing, Spark, DBT</div></div>
+        <div class="p-5 rounded-2xl border border-white/30 dark:border-white/10 bg-white/70 dark:bg-slate-900/60 backdrop-blur lift"><div class="font-semibold">Business Intelligence</div><div class="text-slate-600 dark:text-slate-400 text-sm">Power BI, Tableau, Looker</div></div>
+        <div class="p-5 rounded-2xl border border-white/30 dark:border-white/10 bg-white/70 dark:bg-slate-900/60 backdrop-blur lift"><div class="font-semibold">Cybersecurity</div><div class="text-slate-600 dark:text-slate-400 text-sm">SOC, GRC, IAM, AppSec</div></div>
+        <div class="p-5 rounded-2xl border border-white/30 dark:border-white/10 bg-white/70 dark:bg-slate-900/60 backdrop-blur lift"><div class="font-semibold">Software Engineering</div><div class="text-slate-600 dark:text-slate-400 text-sm">Full‑Stack, Backend, Mobile</div></div>
+        <div class="p-5 rounded-2xl border border-white/30 dark:border-white/10 bg-white/70 dark:bg-slate-900/60 backdrop-blur lift"><div class="font-semibold">Network & Systems</div><div class="text-slate-600 dark:text-slate-400 text-sm">Routing/Switching, Linux/Windows</div></div>
+        <div class="p-5 rounded-2xl border border-white/30 dark:border-white/10 bg-white/70 dark:bg-slate-900/60 backdrop-blur lift"><div class="font-semibold">Help Desk / Desktop</div><div class="text-slate-600 dark:text-slate-400 text-sm">L1–L3 Support, Field Techs</div></div>
+        <div class="p-5 rounded-2xl border border-white/30 dark:border-white/10 bg-white/70 dark:bg-slate-900/60 backdrop-blur lift"><div class="font-semibold">Product / Project / BA</div><div class="text-slate-600 dark:text-slate-400 text-sm">Scrum, SAFe, Delivery</div></div>
+        <div class="p-5 rounded-2xl border border-white/30 dark:border-white/10 bg-white/70 dark:bg-slate-900/60 backdrop-blur lift"><div class="font-semibold">QA Leadership</div><div class="text-slate-600 dark:text-slate-400 text-sm">Leads, Managers, Directors</div></div>
+        <div class="p-5 rounded-2xl border border-white/30 dark:border-white/10 bg-white/70 dark:bg-slate-900/60 backdrop-blur lift"><div class="font-semibold">Other</div><div class="text-slate-600 dark:text-slate-400 text-sm">Tell us what you need</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Employers & Seekers cards -->
+  <section id="employers" class="py-4">
+    <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-6">
+      <div class="p-7 rounded-2xl border border-white/30 dark:border-white/10 bg-white/70 dark:bg-slate-900/60 backdrop-blur lift shadow-soft">
+        <h3 class="text-xl font-extrabold">For Employers</h3>
+        <ul class="mt-4 space-y-2 text-slate-700 dark:text-slate-300">
+          <li>• Shortlists in <span class="font-semibold">48–72 hours</span> for common roles</li>
+          <li>• Two‑layer vetting: skills screen + reference checks</li>
+          <li>• Contract, Contract‑to‑Hire, or Direct Hire</li>
+          <li>• Compliance‑first (E‑Verify, W‑2, C2C, 1099)</li>
+          <li>• Nationwide reach with DFW roots</li>
+        </ul>
+        <div class="mt-5 flex flex-wrap gap-3">
+          <a href="mailto:admin@aksharnixglobal.com?subject=Hire%20Talent%20Inquiry%20(AksharNix)&body=Tell%20us%20about%20the%20role(s)%3A%0A-%20Title%3A%0A-%20Tech%20stack%3A%0A-%20Location%3A%0A-%20Type%3A%20Contract%20%7C%20C2H%20%7C%20Direct%20Hire%0A-%20Rate%2FSalary%20range%3A%0A-%20Start%20date%3A%0A" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-700 to-brand-600 hover:from-brand-800 hover:to-brand-700 text-white shadow-lg">Request Candidates</a>
+          <a href="#process" class="px-5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 hover:bg-gradient-to-b from-white via-brand-50/40 to-white">See Our Process</a>
+        </div>
+      </div>
+      <div id="seekers" class="p-7 rounded-2xl border border-white/30 dark:border-white/10 bg-white/70 dark:bg-slate-900/60 backdrop-blur lift">
+        <h3 class="text-xl font-extrabold">For Job Seekers</h3>
+        <ul class="mt-4 space-y-2 text-slate-700 dark:text-slate-300">
+          <li>• Direct roles with enterprise and high‑growth teams</li>
+          <li>• Resume feedback & interview prep</li>
+          <li>• Transparent pay/rate discussions</li>
+          <li>• On‑assignment support</li>
+        </ul>
+        <div class="mt-5 flex flex-wrap gap-3">
+          <a href="mailto:admin@aksharnixglobal.com?subject=Resume%20Submission%20(AksharNix)&body=Attach%20your%20resume%20and%20share%3A%0A-%20Location%3A%0A-%20Work%20authorization%3A%0A-%20Notice%20period%3A%0A-%20Desired%20rate%2Fsalary%3A%0A" class="px-5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 hover:bg-gradient-to-b from-white via-brand-50/40 to-white">Email Your Resume</a>
+          <a href="tel:+12012221122" class="px-5 py-2.5 rounded-xl bg-slate-900 text-white hover:bg-slate-800">Call (201) 222‑1122</a>
+        </div>
+        <p class="mt-3 text-xs text-slate-500 dark:text-slate-400">AksharNix Global is an equal opportunity employer. We welcome all qualified applicants.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Engagement Models -->
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-extrabold">Engagement models</h2>
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl border border-white/30 dark:border-white/10 bg-white/70 dark:bg-slate-900/60 backdrop-blur lift">
+          <div class="text-sm font-semibold text-brand-700">Contract</div>
+          <p class="mt-2 text-slate-700 dark:text-slate-300">Flexible headcount for projects and peaks. We handle payroll & compliance.</p>
+        </div>
+        <div class="p-6 rounded-2xl border border-white/30 dark:border-white/10 bg-white/70 dark:bg-slate-900/60 backdrop-blur lift">
+          <div class="text-sm font-semibold text-brand-700">Contract‑to‑Hire</div>
+          <p class="mt-2 text-slate-700 dark:text-slate-300">Try before you hire. Convert great talent with confidence.</p>
+        </div>
+        <div class="p-6 rounded-2xl border border-white/30 dark:border-white/10 bg-white/70 dark:bg-slate-900/60 backdrop-blur lift">
+          <div class="text-sm font-semibold text-brand-700">Direct Hire</div>
+          <p class="mt-2 text-slate-700 dark:text-slate-300">Permanent placements for critical roles, with replacement support if needed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section id="process" class="py-16 bg-gradient-to-b from-white via-brand-50/40 to-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-extrabold">Our 5‑step hiring process</h2>
+      <div class="mt-10 grid md:grid-cols-5 gap-5">
+        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800"><div class="text-xs text-slate-500 dark:text-slate-400">Step 1</div><div class="font-semibold mt-1">Intake</div><p class="text-sm mt-1 text-slate-600 dark:text-slate-400">Calibrate on must‑haves, culture, timeline, budget.</p></div>
+        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800"><div class="text-xs text-slate-500 dark:text-slate-400">Step 2</div><div class="font-semibold mt-1">Sourcing</div><p class="text-sm mt-1 text-slate-600 dark:text-slate-400">Active network + targeted outreach.</p></div>
+        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800"><div class="text-xs text-slate-500 dark:text-slate-400">Step 3</div><div class="font-semibold mt-1">Vetting</div><p class="text-sm mt-1 text-slate-600 dark:text-slate-400">Skills screen, references, and compliance checks.</p></div>
+        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800"><div class="text-xs text-slate-500 dark:text-slate-400">Step 4</div><div class="font-semibold mt-1">Interview</div><p class="text-sm mt-1 text-slate-600 dark:text-slate-400">Coordinate panels, feedback loop, de‑risk decisions.</p></div>
+        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800"><div class="text-xs text-slate-500 dark:text-slate-400">Step 5</div><div class="font-semibold mt-1">Onboard</div><p class="text-sm mt-1 text-slate-600 dark:text-slate-400">Offer, paperwork, start; ongoing support.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Jobs Board -->
+  <section id="jobs" class="py-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-end justify-between gap-6 flex-wrap">
+        <h2 class="text-2xl md:text-3xl font-extrabold">Open roles</h2>
+        <a href="#seekers" class="text-brand-700 hover:underline text-sm">Don’t see your fit? Send your resume →</a>
+      </div>
+
+      <!-- Search + Filters -->
+      <div class="mt-6 grid md:grid-cols-[1fr_auto] gap-4 items-center">
+        <input id="jobSearch" class="px-4 py-3 rounded-xl border border-white/30 dark:border-white/10 bg-white/70 dark:bg-slate-900/60 backdrop-blur w-full" placeholder="Search title, location, skill…" />
+        <div id="jobFilters" class="flex flex-wrap gap-2">
+          <button class="px-3 py-1.5 rounded-full text-sm border border-white/30 dark:border-white/10 bg-white/70 dark:bg-slate-900/60 backdrop-blur" data-tag="QA">QA</button>
+          <button class="px-3 py-1.5 rounded-full text-sm border border-white/30 dark:border-white/10 bg-white/70 dark:bg-slate-900/60 backdrop-blur" data-tag="DevOps">DevOps</button>
+          <button class="px-3 py-1.5 rounded-full text-sm border border-white/30 dark:border-white/10 bg-white/70 dark:bg-slate-900/60 backdrop-blur" data-tag="Cloud">Cloud</button>
+          <button class="px-3 py-1.5 rounded-full text-sm border border-white/30 dark:border-white/10 bg-white/70 dark:bg-slate-900/60 backdrop-blur" data-tag="Network">Network</button>
+          <button class="px-3 py-1.5 rounded-full text-sm border border-white/30 dark:border-white/10 bg-white/70 dark:bg-slate-900/60 backdrop-blur" data-tag="Security">Security</button>
+          <button class="px-3 py-1.5 rounded-full text-sm border border-white/30 dark:border-white/10 bg-white/70 dark:bg-slate-900/60 backdrop-blur" data-tag="Data">Data</button>
+        </div>
+      </div>
+
+      <!-- Job Cards -->
+      <div id="jobList" class="mt-6 grid md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+      <div id="jobEmpty" class="hidden mt-6 text-sm text-slate-500 dark:text-slate-400">No roles match your filters.</div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="why-us" class="py-16 bg-white/70 dark:bg-slate-900/60 backdrop-blur">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-extrabold">Why employers choose AksharNix</h2>
+      <div class="mt-8 grid md:grid-cols-2 gap-6">
+        <div class="p-[1px] rounded-2xl bg-gradient-to-r from-brand-700 to-brand-500">
+          <div class="p-6 rounded-[1rem] bg-white/90 dark:bg-slate-900/60 backdrop-blur lift">
+            <div class="text-brand-700 text-xl">⚡</div>
+            <h3 class="font-semibold mt-1">Fast, qualified shortlists</h3>
+            <p class="text-slate-700 dark:text-slate-300 mt-1 text-sm">Interview-ready candidates for common roles in 48–72 hours.</p>
+          </div>
+        </div>
+        <div class="p-[1px] rounded-2xl bg-gradient-to-r from-brand-700 to-brand-500">
+          <div class="p-6 rounded-[1rem] bg-white/90 dark:bg-slate-900/60 backdrop-blur lift">
+            <div class="text-brand-700 text-xl">🛡️</div>
+            <h3 class="font-semibold mt-1">Compliance-first hiring</h3>
+            <p class="text-slate-700 dark:text-slate-300 mt-1 text-sm">E‑Verify, W‑2, C2C, 1099, and background checks—handled.</p>
+          </div>
+        </div>
+        <div class="p-[1px] rounded-2xl bg-gradient-to-r from-brand-700 to-brand-500">
+          <div class="p-6 rounded-[1rem] bg-white/90 dark:bg-slate-900/60 backdrop-blur lift">
+            <div class="text-brand-700 text-xl">🧠</div>
+            <h3 class="font-semibold mt-1">Deep IT focus</h3>
+            <p class="text-slate-700 dark:text-slate-300 mt-1 text-sm">QA/SDET, DevOps, Cloud, Data, Security, Network, and more.</p>
+          </div>
+        </div>
+        <div class="p-[1px] rounded-2xl bg-gradient-to-r from-brand-700 to-brand-500">
+          <div class="p-6 rounded-[1rem] bg-white/90 dark:bg-slate-900/60 backdrop-blur lift">
+            <div class="text-brand-700 text-xl">🤝</div>
+            <h3 class="font-semibold mt-1">Transparent partnership</h3>
+            <p class="text-slate-700 dark:text-slate-300 mt-1 text-sm">Clear rates, fast communication, and on‑assignment support.</p>
+          </div>
+        </div>
+      </div>
+      <div class="mt-6">
+        <a href="#contact" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl text-white bg-gradient-to-r from-brand-700 to-brand-600 hover:from-brand-800 hover:to-brand-700 shadow">Request client references →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 bg-gradient-to-b from-white via-brand-50/40 to-white">
+    <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-start">
+      <div>
+        <h2 class="text-2xl md:text-3xl font-extrabold">Talk to us</h2>
+        <p class="mt-3 text-slate-700 dark:text-slate-300">Describe your hiring need or send your resume. We’ll reply quickly.</p>
+        <div class="mt-6 space-y-3 text-slate-700 dark:text-slate-300">
+          <div>📞 <a class="hover:underline" href="tel:+12012221122">(201) 222‑1122</a></div>
+          <div>✉️ <a class="hover:underline" href="mailto:admin@aksharnixglobal.com">admin@aksharnixglobal.com</a></div>
+          <div>📍 Aubrey, TX • Serving USA</div>
+        </div>
+      </div>
+      <div class="p-6 rounded-2xl border border-white/30 dark:border-white/10 bg-white/70 dark:bg-slate-900/60 backdrop-blur lift shadow-soft">
+        <h3 class="text-lg font-bold">Quick inquiry</h3>
+        <p class="text-sm text-slate-600 dark:text-slate-400 mt-1">This button opens your email with a pre‑filled template.</p>
+        <a href="mailto:admin@aksharnixglobal.com?subject=Staffing%20Inquiry%20from%20Website&body=Company%20name%3A%0ARole(s)%3A%0ALocation%3A%0AType%3A%20Contract%7CContract-to-Hire%7CDirect%20Hire%0ATimeline%3A%0ABudget%20range%3A%0A" class="mt-4 inline-block px-5 py-3 rounded-xl bg-gradient-to-r from-brand-700 to-brand-600 hover:from-brand-800 hover:to-brand-700 text-white shadow-lg">Email Us Now</a>
+        <p class="mt-3 text-xs text-slate-500 dark:text-slate-400">Prefer a form? Connect Formspree/Netlify later for on‑site submissions.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-10 border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+      <div>
+        <div class="flex items-center gap-3">
+          <img id="brandLogoFooter" src="" class="h-8 w-auto hidden" alt="AksharNix Global logo" />
+          <div id="brandFallbackFooter" class="hidden h-8 w-8 bg-slate-900 text-white grid place-items-center text-[10px] font-bold">AN</div>
+          <span class="font-extrabold">AksharNix Global</span>
+        </div>
+        <p class="text-sm text-slate-600 dark:text-slate-400 mt-2 max-w-xl">AksharNix Global is an IT staffing and consulting partner. We connect exceptional talent with growing teams.</p>
+        <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">EEO Statement: We consider all qualified applicants without regard to race, color, religion, sex, national origin, age, disability, or genetics.</p>
+      </div>
+      <div class="text-sm text-slate-600 dark:text-slate-400">
+        <a class="hover:underline" href="#">Privacy Policy</a>
+        <span class="mx-2">•</span>
+        <a class="hover:underline" href="#">Terms of Use</a>
+        <div class="mt-2 text-xs text-slate-500 dark:text-slate-400">© <span id="year"></span> AksharNix Global. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile sticky CTA -->
+  <div class="fixed inset-x-0 bottom-3 px-4 md:hidden z-40">
+    <div class="glass shadow-soft rounded-2xl px-4 py-3 flex items-center justify-between">
+      <span class="text-sm font-semibold text-slate-800">Need candidates?</span>
+      <a href="#contact" class="px-4 py-2 rounded-xl text-white bg-gradient-to-r from-brand-700 to-brand-600 hover:from-brand-800 hover:to-brand-700 shadow">Hire Talent</a>
+    </div>
+  </div>
+
+  <!-- JSON-LD Schema: EmploymentAgency -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EmploymentAgency",
+    "name": "AksharNix Global",
+    "url": "https://aksharnixglobal.com",
+    "logo": "https://aksharnixglobal.com/akshar_nix_logo.png",
+    "telephone": "+1-201-222-1122",
+    "email": "admin@aksharnixglobal.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Aubrey",
+      "addressRegion": "TX",
+      "addressCountry": "US"
+    },
+    "areaServed": "US"
+  }
+  </script>
+
   <script>
-    // keyboard focus visible for buttons
-    document.querySelectorAll('.btn').forEach(b=>{
-      b.addEventListener('focus', ()=>b.style.boxShadow='0 6px 22px rgba(11,55,95,0.35)');
-      b.addEventListener('blur', ()=>b.style.boxShadow='');
-    });
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (menuBtn) menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Sticky header shadow on scroll
+    const header = document.querySelector('header.sticky');
+    const toggleHeaderShadow = () => header && (window.scrollY > 4 ? header.classList.add('shadow-md') : header.classList.remove('shadow-md'));
+    window.addEventListener('scroll', toggleHeaderShadow); toggleHeaderShadow();
+    // Reveal animations
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target); } });
+    }, {threshold: 0.12});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+    // Theme toggle
+    const tbtn = document.getElementById('themeToggle');
+    function setTheme(next){
+      const root = document.documentElement;
+      if(next==='dark'){ root.classList.add('dark'); localStorage.setItem('theme','dark'); tbtn && (tbtn.textContent='☀️'); }
+      else { root.classList.remove('dark'); localStorage.setItem('theme','light'); tbtn && (tbtn.textContent='🌙'); }
+    }
+    if(tbtn){
+      const start = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+      setTheme(start);
+      tbtn.addEventListener('click', ()=>{
+        const isDark = document.documentElement.classList.contains('dark');
+        setTheme(isDark ? 'light' : 'dark');
+      });
+    }
+  </script>
+<script>(function(){const c=['/assets/aksharnix-global.svg','/assets/aksharnix-global.png','/aksharnix-global.svg','/aksharnix-global.png','/logo-aksharnix.svg','/logo-aksharnix.png','/logo.svg','/logo.png','/favicon.png'];const o=window.AKX_LOGO_URL||document.documentElement.getAttribute('data-logo-url');const list=o?[o,...c]:c;function pick(arr,cb){if(!arr.length){cb(null);return;}const u=arr.shift();const i=new Image();i.onload=()=>cb(u);i.onerror=()=>pick(arr,cb);i.src=u;}pick([...list],function(url){const h=document.getElementById('brandLogo');const f=document.getElementById('brandLogoFooter');if(url){[h,f].forEach(el=>{if(el){el.src=url;el.classList.remove('hidden');}});}else{document.getElementById('brandFallback')?.classList.remove('hidden');document.getElementById('brandFallbackFooter')?.classList.remove('hidden');}})})();</script>
+  <!-- Floating contact dock (desktop) -->
+  <div class="hidden md:flex fixed right-4 bottom-24 z-40 flex-col gap-2">
+    <a href="tel:+12012221122" class="px-4 py-2 rounded-xl text-white bg-gradient-to-r from-brand-700 to-brand-600 hover:from-brand-800 hover:to-brand-700 shadow lift">Call</a>
+    <a href="mailto:admin@aksharnixglobal.com?subject=Hire%20Talent%20Inquiry" class="px-4 py-2 rounded-xl text-white bg-gradient-to-r from-brand-700 to-brand-600 hover:from-brand-800 hover:to-brand-700 shadow lift">Email</a>
+  </div>
+
+  <!-- Jobs board script -->
+  <script>
+    (function(){
+      const JOBS = [
+        {title:'Test Engineer (Residential Gateway)',loc:'Plano, TX • Onsite',type:'Contract',tags:['QA','Network'],apply:"mailto:admin@aksharnixglobal.com?subject=Application%3A%20Test%20Engineer&body=Attach%20resume%20and%20share%20notice%20period%20and%20rate."},
+        {title:'DevOps Engineer (AWS/Terraform)',loc:'Plano, TX • Onsite',type:'Contract-to-Hire',tags:['DevOps','Cloud'],apply:"mailto:admin@aksharnixglobal.com?subject=Application%3A%20DevOps%20Engineer&body=Attach%20resume%20and%20share%20notice%20period%20and%20rate."},
+        {title:'Network Engineer (Cisco)',loc:'Dallas, TX • Hybrid',type:'Direct Hire',tags:['Network','Security'],apply:"mailto:admin@aksharnixglobal.com?subject=Application%3A%20Network%20Engineer&body=Attach%20resume%20and%20share%20notice%20period%20and%20salary."}
+      ];
+      const list = document.getElementById('jobList');
+      const empty = document.getElementById('jobEmpty');
+      const search = document.getElementById('jobSearch');
+      const filters = document.getElementById('jobFilters');
+      const active = new Set();
+      function render(){
+        const q = (search?.value||'').toLowerCase();
+        const filtered = JOBS.filter(j=>{
+          const text = (j.title+' '+j.loc+' '+j.type+' '+j.tags.join(' ')).toLowerCase();
+          const matchesText = !q || text.includes(q);
+          const matchesTags = !active.size || j.tags.some(t=>active.has(t));
+          return matchesText && matchesTags;
+        });
+        list.innerHTML = filtered.map(j=>`
+          <div class="p-[1px] rounded-2xl bg-gradient-to-r from-brand-700 to-brand-500">
+            <div class="p-5 rounded-[1rem] bg-white/90 dark:bg-slate-900/60 backdrop-blur lift h-full flex flex-col">
+              <div class="text-sm text-slate-500 dark:text-slate-400">${j.type}</div>
+              <div class="mt-1 font-semibold text-slate-900 dark:text-white">${j.title}</div>
+              <div class="text-sm text-slate-600 dark:text-slate-400">${j.loc}</div>
+              <div class="mt-3 flex flex-wrap gap-2">${j.tags.map(t=>`<span class=\"px-2 py-1 rounded-full text-xs border border-white/30 dark:border-white/10 bg-white/70 dark:bg-slate-900/60 backdrop-blur\">${t}</span>`).join('')}</div>
+              <div class="mt-4 pt-2">
+                <a href="${j.apply}" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-white bg-gradient-to-r from-brand-700 to-brand-600 hover:from-brand-800 hover:to-brand-700 shadow">Email Resume</a>
+              </div>
+            </div>
+          </div>
+        `).join('');
+        empty.classList.toggle('hidden', filtered.length>0);
+      }
+      if(filters){
+        filters.addEventListener('click', (e)=>{
+          const b = e.target.closest('button[data-tag]');
+          if(!b) return;
+          const tag = b.getAttribute('data-tag');
+          if(active.has(tag)){ active.delete(tag); b.classList.remove('ring-2','ring-brand-600'); }
+          else { active.add(tag); b.classList.add('ring-2','ring-brand-600'); }
+          render();
+        });
+      }
+      search?.addEventListener('input', render);
+      render();
+    })();
   </script>
 </body>
 </html>
