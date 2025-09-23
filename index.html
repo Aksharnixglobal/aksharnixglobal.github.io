@@ -4,12 +4,40 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script>(function(){try{const t=localStorage.getItem('theme');if(t==='dark'){document.documentElement.classList.add('dark');}}catch(e){}})();</script>
-  <title>AksharNix Global — IT Staffing & Consulting</title>
-  <meta name="description" content="AksharNix Global is a DFW-based IT staffing partner. Contract, contract-to-hire, and direct hire across QA, DevOps, Cloud, Data, Cybersecurity, and more." />
+  
+  <!-- Primary SEO Meta Tags -->
+  <title>AksharNix Global — IT Staffing & Consulting | QA, DevOps, Cloud, Data Jobs</title>
+  <meta name="title" content="AksharNix Global — IT Staffing & Consulting | QA, DevOps, Cloud, Data Jobs" />
+  <meta name="description" content="AksharNix Global is a DFW-based IT staffing partner. Contract, contract-to-hire, and direct hire across QA, DevOps, Cloud, Data, Cybersecurity, and more. 48-72 hour shortlists." />
+  <meta name="keywords" content="IT staffing, QA jobs, DevOps jobs, Cloud engineer, Data engineer, Cybersecurity, Dallas, Texas, DFW, contract jobs, direct hire, IT recruiting" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="AksharNix Global" />
+  <meta name="language" content="English" />
+  <meta name="revisit-after" content="7 days" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://aksharnixglobal.com/" />
+  <meta property="og:title" content="AksharNix Global — IT Staffing & Consulting" />
+  <meta property="og:description" content="Premier IT staffing partner in DFW. Specializing in QA, DevOps, Cloud, Data, and Cybersecurity roles. Fast 48-72 hour shortlists." />
   <meta property="og:image" content="https://aksharnixglobal.com/akshar_nix_logo.png" />
-  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:site_name" content="AksharNix Global" />
+  <meta property="og:locale" content="en_US" />
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://aksharnixglobal.com/" />
+  <meta property="twitter:title" content="AksharNix Global — IT Staffing & Consulting" />
+  <meta property="twitter:description" content="Premier IT staffing partner in DFW. Specializing in QA, DevOps, Cloud, Data, and Cybersecurity roles. Fast 48-72 hour shortlists." />
+  <meta property="twitter:image" content="https://aksharnixglobal.com/akshar_nix_logo.png" />
+  
+  <!-- Favicons -->
   <link rel="icon" href="/favicon.png" />
-  <link rel="icon" type="image/png" href="/logo.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/akshar_nix_logo.png" />
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://aksharnixglobal.com/" />
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
   <!-- Local CSS -->
@@ -32,6 +60,8 @@
 
 </head>
 <body class="bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-100">
+  <!-- Skip to main content link for accessibility -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 bg-brand-700 text-white px-4 py-2 rounded">Skip to main content</a>
   <!-- Top Bar -->
   <div class="hidden md:block bg-brand-900 text-white text-sm">
     <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
@@ -63,7 +93,7 @@
         <a href="#contact" class="hover:text-brand-700">Contact</a>
       </nav>
       <div class="hidden md:flex items-center gap-3">
-        <button id="themeToggle" title="Toggle theme" class="inline-flex items-center justify-center w-10 h-10 rounded-xl border border-slate-300 dark:border-slate-700/70 hover:bg-slate-50 dark:border-white/20 dark:hover:bg-white/10">🌙</button>
+        <button id="themeToggle" title="Toggle dark/light mode" aria-label="Toggle dark mode" class="inline-flex items-center justify-center w-10 h-10 rounded-xl border border-slate-300 dark:border-slate-700/70 hover:bg-slate-50 dark:border-white/20 dark:hover:bg-white/10">🌙</button>
         <a href="#contact" class="px-4 py-2 rounded-xl border border-slate-300 dark:border-slate-700 hover:bg-slate-50">Hire Talent</a>
         <a href="#seekers" class="px-4 py-2 rounded-xl bg-gradient-to-r from-brand-700 to-brand-600 hover:from-brand-800 hover:to-brand-700 text-white shadow-soft">Submit Resume</a>
       </div>
@@ -86,7 +116,8 @@
   </header>
 
   <!-- Hero -->
-  <section class="relative overflow-hidden">
+  <main id="main-content">
+  <section class="relative overflow-hidden" role="banner" aria-label="Hero section">
     <!-- soft gradient + animated blobs -->
     <div class="absolute inset-0 bg-gradient-to-br from-brand-50 via-white to-white dark:from-slate-900 dark:via-slate-950 dark:to-slate-950"></div>
     <div class="pointer-events-none absolute -top-20 -right-24 w-[38rem] h-[38rem] rounded-full bg-gradient-to-tr from-brand-200 to-brand-400 blur-3xl opacity-40 dark:opacity-20"></div>
@@ -302,12 +333,12 @@
       <div class="mt-6 grid md:grid-cols-[1fr_auto] gap-4 items-center">
         <input id="jobSearch" class="px-4 py-3 rounded-xl border border-white/30 dark:border-white/10 bg-white/70 dark:bg-slate-900/60 backdrop-blur w-full" placeholder="Search title, location, skill…" />
         <div id="jobFilters" class="flex flex-wrap gap-2">
-          <button class="px-3 py-1.5 rounded-full text-sm border border-white/30 dark:border-white/10 bg-white/70 dark:bg-slate-900/60 backdrop-blur" data-tag="QA">QA</button>
-          <button class="px-3 py-1.5 rounded-full text-sm border border-white/30 dark:border-white/10 bg-white/70 dark:bg-slate-900/60 backdrop-blur" data-tag="DevOps">DevOps</button>
-          <button class="px-3 py-1.5 rounded-full text-sm border border-white/30 dark:border-white/10 bg-white/70 dark:bg-slate-900/60 backdrop-blur" data-tag="Cloud">Cloud</button>
-          <button class="px-3 py-1.5 rounded-full text-sm border border-white/30 dark:border-white/10 bg-white/70 dark:bg-slate-900/60 backdrop-blur" data-tag="Network">Network</button>
-          <button class="px-3 py-1.5 rounded-full text-sm border border-white/30 dark:border-white/10 bg-white/70 dark:bg-slate-900/60 backdrop-blur" data-tag="Security">Security</button>
-          <button class="px-3 py-1.5 rounded-full text-sm border border-white/30 dark:border-white/10 bg-white/70 dark:bg-slate-900/60 backdrop-blur" data-tag="Data">Data</button>
+          <button class="px-3 py-1.5 rounded-full text-sm border border-white/30 dark:border-white/10 bg-white/70 dark:bg-slate-900/60 backdrop-blur" data-tag="QA" aria-label="Filter jobs by QA">QA</button>
+          <button class="px-3 py-1.5 rounded-full text-sm border border-white/30 dark:border-white/10 bg-white/70 dark:bg-slate-900/60 backdrop-blur" data-tag="DevOps" aria-label="Filter jobs by DevOps">DevOps</button>
+          <button class="px-3 py-1.5 rounded-full text-sm border border-white/30 dark:border-white/10 bg-white/70 dark:bg-slate-900/60 backdrop-blur" data-tag="Cloud" aria-label="Filter jobs by Cloud">Cloud</button>
+          <button class="px-3 py-1.5 rounded-full text-sm border border-white/30 dark:border-white/10 bg-white/70 dark:bg-slate-900/60 backdrop-blur" data-tag="Network" aria-label="Filter jobs by Network">Network</button>
+          <button class="px-3 py-1.5 rounded-full text-sm border border-white/30 dark:border-white/10 bg-white/70 dark:bg-slate-900/60 backdrop-blur" data-tag="Security" aria-label="Filter jobs by Security">Security</button>
+          <button class="px-3 py-1.5 rounded-full text-sm border border-white/30 dark:border-white/10 bg-white/70 dark:bg-slate-900/60 backdrop-blur" data-tag="Data" aria-label="Filter jobs by Data">Data</button>
         </div>
       </div>
 
@@ -398,6 +429,7 @@
       </div>
     </div>
   </footer>
+  </main>
 
   <!-- Mobile sticky CTA -->
   <div class="fixed inset-x-0 bottom-3 px-4 md:hidden z-40">
@@ -428,38 +460,130 @@
   </script>
 
   <script>
-    // Mobile menu toggle
-    const menuBtn = document.getElementById('menuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    if (menuBtn) menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-    // Year
-    document.getElementById('year').textContent = new Date().getFullYear();
-    // Sticky header shadow on scroll
-    const header = document.querySelector('header.sticky');
-    const toggleHeaderShadow = () => header && (window.scrollY > 4 ? header.classList.add('shadow-md') : header.classList.remove('shadow-md'));
-    window.addEventListener('scroll', toggleHeaderShadow); toggleHeaderShadow();
-    // Reveal animations
-    const io = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target); } });
-    }, {threshold: 0.12});
-    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-    // Theme toggle
-    const tbtn = document.getElementById('themeToggle');
-    function setTheme(next){
-      const root = document.documentElement;
-      if(next==='dark'){ root.classList.add('dark'); localStorage.setItem('theme','dark'); tbtn && (tbtn.textContent='☀️'); }
-      else { root.classList.remove('dark'); localStorage.setItem('theme','light'); tbtn && (tbtn.textContent='🌙'); }
-    }
-    if(tbtn){
-      const start = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
-      setTheme(start);
-      tbtn.addEventListener('click', ()=>{
-        const isDark = document.documentElement.classList.contains('dark');
-        setTheme(isDark ? 'light' : 'dark');
-      });
-    }
+    // Initialize website functionality when DOM is loaded
+    document.addEventListener('DOMContentLoaded', function() {
+      try {
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        if (menuBtn && mobileMenu) {
+          menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+        }
+        
+        // Year
+        const yearEl = document.getElementById('year');
+        if (yearEl) {
+          yearEl.textContent = new Date().getFullYear();
+        }
+        
+        // Sticky header shadow on scroll
+        const header = document.querySelector('header.sticky');
+        if (header) {
+          const toggleHeaderShadow = () => {
+            if (window.scrollY > 4) {
+              header.classList.add('shadow-md');
+            } else {
+              header.classList.remove('shadow-md');
+            }
+          };
+          window.addEventListener('scroll', toggleHeaderShadow, { passive: true });
+          toggleHeaderShadow();
+        }
+        
+        // Reveal animations with Intersection Observer
+        if ('IntersectionObserver' in window) {
+          const io = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+                io.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.12 });
+          
+          document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+        } else {
+          // Fallback for older browsers
+          document.querySelectorAll('.reveal').forEach(el => el.classList.add('show'));
+        }
+        
+        // Theme toggle functionality
+        const tbtn = document.getElementById('themeToggle');
+        if (tbtn) {
+          function setTheme(next) {
+            const root = document.documentElement;
+            try {
+              if (next === 'dark') {
+                root.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+                tbtn.textContent = '☀️';
+                tbtn.setAttribute('aria-label', 'Switch to light mode');
+              } else {
+                root.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+                tbtn.textContent = '🌙';
+                tbtn.setAttribute('aria-label', 'Switch to dark mode');
+              }
+            } catch (e) {
+              console.warn('Theme storage failed:', e);
+            }
+          }
+          
+          const start = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+          setTheme(start);
+          
+          tbtn.addEventListener('click', () => {
+            const isDark = document.documentElement.classList.contains('dark');
+            setTheme(isDark ? 'light' : 'dark');
+          });
+        }
+      } catch (error) {
+        console.error('Error initializing website:', error);
+      }
+    });
   </script>
-<script>(function(){const c=['/assets/aksharnix-global.svg','/assets/aksharnix-global.png','/aksharnix-global.svg','/aksharnix-global.png','/logo-aksharnix.svg','/logo-aksharnix.png','/logo.svg','/logo.png','/favicon.png'];const o=window.AKX_LOGO_URL||document.documentElement.getAttribute('data-logo-url');const list=o?[o,...c]:c;function pick(arr,cb){if(!arr.length){cb(null);return;}const u=arr.shift();const i=new Image();i.onload=()=>cb(u);i.onerror=()=>pick(arr,cb);i.src=u;}pick([...list],function(url){const h=document.getElementById('brandLogo');const f=document.getElementById('brandLogoFooter');if(url){[h,f].forEach(el=>{if(el){el.src=url;el.classList.remove('hidden');}});}else{document.getElementById('brandFallback')?.classList.remove('hidden');document.getElementById('brandFallbackFooter')?.classList.remove('hidden');}})})();</script>
+  
+  <!-- Logo loading script -->
+  <script>
+    (function() {
+      const logoUrls = [
+        window.AKX_LOGO_URL || '/akshar_nix_logo.png',
+        '/logo.png',
+        '/favicon.png'
+      ];
+      
+      function loadLogo(urls, callback) {
+        if (!urls.length) {
+          callback(null);
+          return;
+        }
+        
+        const url = urls.shift();
+        const img = new Image();
+        img.onload = () => callback(url);
+        img.onerror = () => loadLogo(urls, callback);
+        img.src = url;
+      }
+      
+      loadLogo([...logoUrls], function(url) {
+        const brandLogo = document.getElementById('brandLogo');
+        const brandLogoFooter = document.getElementById('brandLogoFooter');
+        
+        if (url) {
+          [brandLogo, brandLogoFooter].forEach(el => {
+            if (el) {
+              el.src = url;
+              el.classList.remove('hidden');
+            }
+          });
+        } else {
+          // Show fallback initials if no logo loads
+          document.getElementById('brandFallback')?.classList.remove('hidden');
+          document.getElementById('brandFallbackFooter')?.classList.remove('hidden');
+        }
+      });
+    })();
+  </script>
   <!-- Floating contact dock (desktop) -->
   <div class="hidden md:flex fixed right-4 bottom-24 z-40 flex-col gap-2">
     <a href="tel:+12012221122" class="px-4 py-2 rounded-xl text-white bg-gradient-to-r from-brand-700 to-brand-600 hover:from-brand-800 hover:to-brand-700 shadow lift">Call</a>
