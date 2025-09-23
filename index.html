@@ -10,56 +10,26 @@
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" href="/favicon.png" />
   <link rel="icon" type="image/png" href="/logo.png" />
-  <!-- Fonts --><!-- Tailwind CSS (CDN) -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              50: '#eaf3f9',
-              100: '#d6e6f3',
-              200: '#a7c6da',
-              300: '#86b2cd',
-              400: '#6192b9',
-              500: '#3f7fb0',
-              600: '#1682b8',
-              700: '#0f5f97',
-              800: '#074687',
-              900: '#063c73'
-            }
-          },
-          boxShadow: {
-            soft: '0 8px 30px rgba(2, 6, 23, 0.10)'
-          }
-        }
-      }
-    }
-  </script>
-  <script>window.AKX_LOGO_URL='/akshar_nix_logo.png?v=1';</script>
-  <style>
-    /* Smooth scroll */
-    html{scroll-behavior:smooth}
-    /* Modern brand font */
-    body{font-family:'Manrope',ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,'Apple Color Emoji','Segoe UI Emoji';}
-    /* Fancy helpers */
-    .glass{background:rgba(255,255,255,.65);backdrop-filter:saturate(140%) blur(10px);border:1px solid rgba(255,255,255,.35)}
-    .lift{transition:transform .2s ease, box-shadow .2s ease}
-    .lift:hover{transform:translateY(-2px)}
-    .reveal{opacity:0;transform:translateY(8px);transition:opacity .5s ease,transform .5s ease}
-    .reveal.show{opacity:1;transform:none}
-    /* marquee */
-    .marquee{display:flex;gap:2.5rem;white-space:nowrap;animation:scroll 30s linear infinite}
-    .marquee:hover{animation-play-state:paused}
-    @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-  </style>
-  <style>
-    @keyframes spin-slow{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
-    .spin-slow{animation:spin-slow 40s linear infinite}
-  </style>
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+  <!-- Local CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Fallback font if Google Fonts fail */
+    @font-face {
+      font-family: 'Manrope-fallback';
+      src: local('Arial'), local('Helvetica'), local('sans-serif');
+      font-weight: 100 900;
+      font-style: normal;
+      font-display: swap;
+    }
+    
+    body {
+      font-family: 'Manrope', 'Manrope-fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    }
+  </style>
+  <script>window.AKX_LOGO_URL='/akshar_nix_logo.png?v=1';</script>
+
 </head>
 <body class="bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-100">
   <!-- Top Bar -->
