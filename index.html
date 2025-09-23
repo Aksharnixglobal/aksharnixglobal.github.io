@@ -116,76 +116,156 @@
   </header>
 
   <!-- Hero -->
-  <section class="relative overflow-hidden">
-    <!-- soft gradient + animated blobs -->
-    <div class="absolute inset-0 bg-gradient-to-br from-brand-50 via-white to-white dark:from-slate-900 dark:via-slate-950 dark:to-slate-950"></div>
-    <div class="pointer-events-none absolute -top-20 -right-24 w-[38rem] h-[38rem] rounded-full bg-gradient-to-tr from-brand-200 to-brand-400 blur-3xl opacity-40 dark:opacity-20"></div>
-    <div class="pointer-events-none absolute -bottom-24 -left-24 w-[30rem] h-[30rem] rounded-full bg-gradient-to-tr from-brand-100 to-brand-300 blur-3xl opacity-50 dark:opacity-25"></div>
+  <section class="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-white via-blue-50/30 to-white dark:from-slate-900 dark:via-slate-950 dark:to-slate-900">
+    <!-- Animated gradient blobs -->
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-400/20 to-blue-600/20 rounded-full blur-3xl animate-pulse"></div>
+      <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-tr from-blue-300/15 to-blue-500/15 rounded-full blur-3xl animate-pulse animation-delay-1000"></div>
+      <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-gradient-to-r from-blue-200/10 to-blue-400/10 rounded-full blur-2xl animate-pulse animation-delay-2000"></div>
+    </div>
 
-    <div class="relative max-w-7xl mx-auto px-4 py-20 md:py-28 grid md:grid-cols-2 gap-10 items-center">
-      <div class="reveal">
-        <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">
-          IT Staffing that just <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-800 to-brand-600">works</span>.
-        </h1>
-        <p class="mt-5 text-lg text-slate-600 dark:text-slate-400 dark:text-slate-300 max-w-xl">Contract, contract‑to‑hire, and direct‑hire talent for QA, DevOps, Cloud, Data, Security, and more. Shortlists in 48–72 hours. Local to DFW, placing nationwide.</p>
-        <div class="mt-7 flex flex-col sm:flex-row gap-3">
-          <a href="#contact" class="px-6 py-3 rounded-xl text-white bg-gradient-to-r from-brand-700 to-brand-600 hover:from-brand-800 hover:to-brand-700 shadow-lg">Hire Talent</a>
-          <a href="#seekers" class="px-6 py-3 rounded-xl border border-slate-300 dark:border-slate-700 dark:border-slate-700 dark:text-slate-100 hover:bg-gradient-to-b from-white via-brand-50/40 to-white dark:hover:bg-slate-900">Submit Resume</a>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 py-20 grid lg:grid-cols-12 gap-12 items-center">
+      <!-- Content Section -->
+      <div class="lg:col-span-7 space-y-8 reveal">
+        <!-- Headline -->
+        <div class="space-y-4">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
+            <span class="block text-slate-900 dark:text-white">IT Solutions</span>
+            <span class="block">that just </span>
+            <span class="bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 bg-clip-text text-transparent font-black">work</span>
+          </h1>
+          <p class="text-xl md:text-2xl text-slate-600 dark:text-slate-300 max-w-2xl">
+            Elite <span class="font-semibold text-blue-700 dark:text-blue-400">IT talent</span> for your most critical projects. 
+            <span class="font-medium">Contract, contract-to-hire, and direct-hire</span> professionals ready to deliver results.
+          </p>
         </div>
-        <div class="mt-6 text-sm text-slate-500 dark:text-slate-400">E‑Verify • W‑2 • C2C • 1099 • Compliance‑first</div>
 
-        <!-- small glass stats -->
-        <div class="mt-6 grid grid-cols-3 max-w-lg gap-3">
-          <div class="glass rounded-xl px-4 py-3 text-center text-sm"><div class="font-extrabold text-slate-900 dark:text-white">48–72h</div><div class="text-slate-600 dark:text-slate-400 dark:text-slate-300">Shortlists</div></div>
-          <div class="glass rounded-xl px-4 py-3 text-center text-sm"><div class="font-extrabold text-slate-900 dark:text-white">IT‑only</div><div class="text-slate-600 dark:text-slate-400 dark:text-slate-300">Focus</div></div>
-          <div class="glass rounded-xl px-4 py-3 text-center text-sm"><div class="font-extrabold text-slate-900 dark:text-white">Nationwide</div><div class="text-slate-600 dark:text-slate-400 dark:text-slate-300">Reach</div></div>
+        <!-- Trust Badges -->
+        <div class="flex flex-wrap gap-4">
+          <div class="flex items-center gap-3 px-4 py-2 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-full border border-blue-200/50 dark:border-blue-400/20">
+            <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+            <span class="text-sm font-semibold text-slate-700 dark:text-slate-300">48-72 Hour Delivery</span>
+          </div>
+          <div class="flex items-center gap-3 px-4 py-2 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-full border border-blue-200/50 dark:border-blue-400/20">
+            <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
+            <span class="text-sm font-semibold text-slate-700 dark:text-slate-300">Compliance-First</span>
+          </div>
+          <div class="flex items-center gap-3 px-4 py-2 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-full border border-blue-200/50 dark:border-blue-400/20">
+            <div class="w-3 h-3 bg-purple-500 rounded-full"></div>
+            <span class="text-sm font-semibold text-slate-700 dark:text-slate-300">Global Reach</span>
+          </div>
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row gap-4 pt-4">
+          <a href="#contact" class="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center">
+            <span class="relative z-10">Hire Talent</span>
+            <div class="absolute inset-0 bg-gradient-to-r from-blue-700 to-blue-800 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          </a>
+          <a href="#roles" class="group px-8 py-4 bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm border-2 border-blue-600/20 hover:border-blue-600/40 text-slate-900 dark:text-white font-semibold rounded-2xl hover:shadow-lg transition-all duration-300 text-center">
+            Browse Services
+            <span class="ml-2 group-hover:translate-x-1 transition-transform duration-300 inline-block">→</span>
+          </a>
         </div>
       </div>
-      <div class="relative reveal">
-        <div class="rounded-2xl glass p-5 shadow-soft">
-          <!-- Talent snapshots (replaces globe visual) -->
-          <div class="grid gap-3 mb-5">
-            <div class="p-4 rounded-xl bg-white/85 dark:bg-slate-900/70 flex items-center justify-between lift">
-              <div class="flex items-center gap-3">
-                <div class="h-10 w-10 rounded-full bg-brand-600/10 text-brand-700 grid place-items-center font-extrabold">QA</div>
-                <div>
-                  <div class="font-semibold text-slate-900">SDET (API / Playwright)</div>
-                  <div class="text-xs text-slate-500 dark:text-slate-400">8 yrs • Austin • 2‑week notice</div>
+
+      <!-- Floating Cards Section -->
+      <div class="lg:col-span-5 relative">
+        <div class="relative space-y-6">
+          <!-- Service Cards -->
+          <div class="flex flex-col space-y-4">
+            <!-- Card 1 - Top -->
+            <div class="ml-8 transform hover:scale-105 transition-all duration-300 reveal animation-delay-300">
+              <div class="bg-white/90 dark:bg-slate-800/90 backdrop-blur-lg rounded-2xl p-6 shadow-xl border border-white/20 dark:border-slate-700/50">
+                <div class="flex items-center gap-4">
+                  <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center text-white font-bold text-lg">
+                    QA
+                  </div>
+                  <div class="flex-1">
+                    <h3 class="font-bold text-slate-900 dark:text-white">SDET Engineer</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">API Testing • Playwright • 8 yrs exp</p>
+                  </div>
+                  <div class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-xs font-semibold rounded-full">
+                    Available
+                  </div>
                 </div>
               </div>
-              <span class="text-xs px-2 py-1 rounded-full bg-brand-50 text-brand-700">Available</span>
             </div>
-            <div class="p-4 rounded-xl bg-white/85 dark:bg-slate-900/70 flex items-center justify-between lift">
-              <div class="flex items-center gap-3">
-                <div class="h-10 w-10 rounded-full bg-brand-600/10 text-brand-700 grid place-items-center font-extrabold">DV</div>
-                <div>
-                  <div class="font-semibold text-slate-900">DevOps Engineer (AWS/Terraform)</div>
-                  <div class="text-xs text-slate-500 dark:text-slate-400">6 yrs • Plano • Immediate</div>
+
+            <!-- Card 2 - Middle -->
+            <div class="mr-8 transform hover:scale-105 transition-all duration-300 reveal animation-delay-600">
+              <div class="bg-white/90 dark:bg-slate-800/90 backdrop-blur-lg rounded-2xl p-6 shadow-xl border border-white/20 dark:border-slate-700/50">
+                <div class="flex items-center gap-4">
+                  <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center text-white font-bold text-lg">
+                    DV
+                  </div>
+                  <div class="flex-1">
+                    <h3 class="font-bold text-slate-900 dark:text-white">DevOps Engineer</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">AWS • Terraform • K8s • 6 yrs exp</p>
+                  </div>
+                  <div class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 text-xs font-semibold rounded-full">
+                    Hot Match
+                  </div>
                 </div>
               </div>
-              <span class="text-xs px-2 py-1 rounded-full bg-brand-50 text-brand-700">Top match</span>
             </div>
-            <div class="p-4 rounded-xl bg-white/85 dark:bg-slate-900/70 flex items-center justify-between lift">
-              <div class="flex items-center gap-3">
-                <div class="h-10 w-10 rounded-full bg-brand-600/10 text-brand-700 grid place-items-center font-extrabold">DE</div>
-                <div>
-                  <div class="font-semibold text-slate-900">Data Engineer (DBT / Snowflake)</div>
-                  <div class="text-xs text-slate-500 dark:text-slate-400">7 yrs • Remote • 1‑week notice</div>
+
+            <!-- Card 3 - Bottom -->
+            <div class="ml-4 transform hover:scale-105 transition-all duration-300 reveal animation-delay-900">
+              <div class="bg-white/90 dark:bg-slate-800/90 backdrop-blur-lg rounded-2xl p-6 shadow-xl border border-white/20 dark:border-slate-700/50">
+                <div class="flex items-center gap-4">
+                  <div class="w-12 h-12 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-xl flex items-center justify-center text-white font-bold text-lg">
+                    DE
+                  </div>
+                  <div class="flex-1">
+                    <h3 class="font-bold text-slate-900 dark:text-white">Data Engineer</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">Snowflake • DBT • Python • 7 yrs exp</p>
+                  </div>
+                  <div class="px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-400 text-xs font-semibold rounded-full">
+                    Hotlist
+                  </div>
                 </div>
               </div>
-              <span class="text-xs px-2 py-1 rounded-full bg-brand-50 text-brand-700">Hotlist</span>
             </div>
           </div>
-          <div class="grid grid-cols-2 gap-4 text-sm">
-            <div class="p-4 rounded-xl bg-white/60 dark:bg-slate-900/60"><div class="font-semibold text-slate-900">QA & SDET</div><div class="text-slate-600 dark:text-slate-400 dark:text-slate-300">Functional • Automation • API</div></div>
-            <div class="p-4 rounded-xl bg-white/60 dark:bg-slate-900/60"><div class="font-semibold text-slate-900">DevOps & Platform</div><div class="text-slate-600 dark:text-slate-400 dark:text-slate-300">K8s • CI/CD • Terraform</div></div>
-            <div class="p-4 rounded-xl bg-white/60 dark:bg-slate-900/60"><div class="font-semibold text-slate-900">Cloud & Security</div><div class="text-slate-600 dark:text-slate-400 dark:text-slate-300">AWS • Azure • GCP • SecOps</div></div>
-            <div class="p-4 rounded-xl bg-white/60 dark:bg-slate-900/60"><div class="font-semibold text-slate-900">Data & Analytics</div><div class="text-slate-600 dark:text-slate-400 dark:text-slate-300">ETL • Warehousing • BI</div></div>
+
+          <!-- Stats Grid -->
+          <div class="mt-8 grid grid-cols-2 gap-4 reveal animation-delay-1200">
+            <div class="bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm rounded-xl p-4 text-center">
+              <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">500+</div>
+              <div class="text-sm text-slate-600 dark:text-slate-400">Active Candidates</div>
+            </div>
+            <div class="bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm rounded-xl p-4 text-center">
+              <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">98%</div>
+              <div class="text-sm text-slate-600 dark:text-slate-400">Success Rate</div>
+            </div>
           </div>
-          <div class="mt-4 text-xs text-slate-500 dark:text-slate-400">Plus: Network • Help Desk • PM/BA • Full‑Stack • Mobile</div>
         </div>
       </div>
     </div>
+
+    <!-- Custom CSS for animations -->
+    <style>
+      .animation-delay-300 { animation-delay: 0.3s; }
+      .animation-delay-600 { animation-delay: 0.6s; }
+      .animation-delay-900 { animation-delay: 0.9s; }
+      .animation-delay-1000 { animation-delay: 1s; }
+      .animation-delay-1200 { animation-delay: 1.2s; }
+      .animation-delay-2000 { animation-delay: 2s; }
+      
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        animation: fadeInUp 1s ease forwards;
+      }
+      
+      @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
   </section>
 
   <!-- Trust Bar -->
