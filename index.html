@@ -122,70 +122,269 @@
     <div class="pointer-events-none absolute -top-20 -right-24 w-[38rem] h-[38rem] rounded-full bg-gradient-to-tr from-brand-200 to-brand-400 blur-3xl opacity-40 dark:opacity-20"></div>
     <div class="pointer-events-none absolute -bottom-24 -left-24 w-[30rem] h-[30rem] rounded-full bg-gradient-to-tr from-brand-100 to-brand-300 blur-3xl opacity-50 dark:opacity-25"></div>
 
+    <!-- Floating Cards with Stock Images -->
+    <div class="absolute inset-0 pointer-events-none overflow-hidden">
+      <!-- Business Meeting Card - Top Right -->
+      <div class="absolute top-10 right-10 w-32 h-24 rounded-xl glass shadow-lg transform rotate-6 lift opacity-80 hover:opacity-100 transition-all duration-300 hidden lg:block">
+        <div class="relative w-full h-full rounded-xl overflow-hidden bg-gradient-to-br from-brand-50 to-brand-100 dark:from-slate-800 dark:to-slate-900">
+          <!-- Placeholder for Business Meeting Image -->
+          <div class="absolute inset-0 bg-gradient-to-br from-brand-600/20 to-brand-800/30 flex items-center justify-center">
+            <svg class="w-8 h-8 text-brand-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+          </div>
+          <div class="absolute bottom-1 left-2 right-2">
+            <div class="text-[8px] font-semibold text-brand-800 dark:text-brand-200 truncate">Business Meeting</div>
+          </div>
+          <!-- Photo swap instruction -->
+          <div class="absolute -top-1 -right-1 w-3 h-3 bg-yellow-400 rounded-full text-[6px] text-center leading-none font-bold text-yellow-900 opacity-60" title="Replace with company team photo">!</div>
+        </div>
+      </div>
+
+      <!-- Tech Team Card - Bottom Left -->
+      <div class="absolute bottom-20 left-8 w-36 h-28 rounded-xl glass shadow-lg transform -rotate-3 lift opacity-80 hover:opacity-100 transition-all duration-300 hidden lg:block">
+        <div class="relative w-full h-full rounded-xl overflow-hidden bg-gradient-to-br from-brand-50 to-brand-100 dark:from-slate-800 dark:to-slate-900">
+          <!-- Placeholder for Tech Team Image -->
+          <div class="absolute inset-0 bg-gradient-to-br from-brand-600/20 to-brand-800/30 flex items-center justify-center">
+            <svg class="w-10 h-10 text-brand-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <div class="absolute bottom-1 left-2 right-2">
+            <div class="text-[8px] font-semibold text-brand-800 dark:text-brand-200 truncate">Tech Team</div>
+          </div>
+          <!-- Photo swap instruction -->
+          <div class="absolute -top-1 -right-1 w-3 h-3 bg-yellow-400 rounded-full text-[6px] text-center leading-none font-bold text-yellow-900 opacity-60" title="Replace with tech team photo">!</div>
+        </div>
+      </div>
+
+      <!-- Remote Work Card - Top Left -->
+      <div class="absolute top-32 left-12 w-28 h-20 rounded-xl glass shadow-lg transform rotate-12 lift opacity-70 hover:opacity-100 transition-all duration-300 hidden lg:block">
+        <div class="relative w-full h-full rounded-xl overflow-hidden bg-gradient-to-br from-brand-50 to-brand-100 dark:from-slate-800 dark:to-slate-900">
+          <!-- Placeholder for Remote Work Image -->
+          <div class="absolute inset-0 bg-gradient-to-br from-brand-600/20 to-brand-800/30 flex items-center justify-center">
+            <svg class="w-6 h-6 text-brand-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2v0" />
+            </svg>
+          </div>
+          <div class="absolute bottom-1 left-1 right-1">
+            <div class="text-[7px] font-semibold text-brand-800 dark:text-brand-200 truncate">Remote Work</div>
+          </div>
+          <!-- Photo swap instruction -->
+          <div class="absolute -top-1 -right-1 w-3 h-3 bg-yellow-400 rounded-full text-[6px] text-center leading-none font-bold text-yellow-900 opacity-60" title="Replace with remote work photo">!</div>
+        </div>
+      </div>
+
+      <!-- Diversity & Inclusion Card - Bottom Right -->
+      <div class="absolute bottom-32 right-16 w-30 h-22 rounded-xl glass shadow-lg transform -rotate-6 lift opacity-75 hover:opacity-100 transition-all duration-300 hidden lg:block">
+        <div class="relative w-full h-full rounded-xl overflow-hidden bg-gradient-to-br from-brand-50 to-brand-100 dark:from-slate-800 dark:to-slate-900">
+          <!-- Placeholder for Diversity Image -->
+          <div class="absolute inset-0 bg-gradient-to-br from-brand-600/20 to-brand-800/30 flex items-center justify-center">
+            <svg class="w-8 h-8 text-brand-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" />
+            </svg>
+          </div>
+          <div class="absolute bottom-1 left-1 right-1">
+            <div class="text-[7px] font-semibold text-brand-800 dark:text-brand-200 truncate">Diverse Team</div>
+          </div>
+          <!-- Photo swap instruction -->
+          <div class="absolute -top-1 -right-1 w-3 h-3 bg-yellow-400 rounded-full text-[6px] text-center leading-none font-bold text-yellow-900 opacity-60" title="Replace with diverse team photo">!</div>
+        </div>
+      </div>
+    </div>
+
     <div class="relative max-w-7xl mx-auto px-4 py-20 md:py-28 grid md:grid-cols-2 gap-10 items-center">
       <div class="reveal">
+        <!-- IT & Staffing Icons -->
+        <div class="flex items-center gap-4 mb-6">
+          <div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-50 dark:bg-brand-900/30 border border-brand-200 dark:border-brand-800">
+            <svg class="w-4 h-4 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            <span class="text-xs font-semibold text-brand-700 dark:text-brand-300">IT Solutions</span>
+          </div>
+          <div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-50 dark:bg-brand-900/30 border border-brand-200 dark:border-brand-800">
+            <svg class="w-4 h-4 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+            <span class="text-xs font-semibold text-brand-700 dark:text-brand-300">Expert Staffing</span>
+          </div>
+        </div>
+
         <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">
           IT Staffing that just <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-800 to-brand-600">works</span>.
         </h1>
         <p class="mt-5 text-lg text-slate-600 dark:text-slate-400 dark:text-slate-300 max-w-xl">Contract, contract‑to‑hire, and direct‑hire talent for QA, DevOps, Cloud, Data, Security, and more. Shortlists in 48–72 hours. Local to DFW, placing nationwide.</p>
+        
+        <!-- Enhanced CTAs with icons -->
         <div class="mt-7 flex flex-col sm:flex-row gap-3">
-          <a href="#contact" class="px-6 py-3 rounded-xl text-white bg-gradient-to-r from-brand-700 to-brand-600 hover:from-brand-800 hover:to-brand-700 shadow-lg">Hire Talent</a>
-          <a href="#seekers" class="px-6 py-3 rounded-xl border border-slate-300 dark:border-slate-700 dark:border-slate-700 dark:text-slate-100 hover:bg-gradient-to-b from-white via-brand-50/40 to-white dark:hover:bg-slate-900">Submit Resume</a>
+          <a href="#contact" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-white bg-gradient-to-r from-brand-700 to-brand-600 hover:from-brand-800 hover:to-brand-700 shadow-lg transition-all duration-200 group">
+            <svg class="w-4 h-4 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0H8m8 0v2a2 2 0 01-2 2H10a2 2 0 01-2-2V6m8 0V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2" />
+            </svg>
+            Hire Talent
+          </a>
+          <a href="#seekers" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-slate-300 dark:border-slate-700 dark:text-slate-100 hover:bg-gradient-to-b from-white via-brand-50/40 to-white dark:hover:bg-slate-900 transition-all duration-200 group">
+            <svg class="w-4 h-4 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            Submit Resume
+          </a>
         </div>
+        
         <div class="mt-6 text-sm text-slate-500 dark:text-slate-400">E‑Verify • W‑2 • C2C • 1099 • Compliance‑first</div>
 
-        <!-- small glass stats -->
+        <!-- Enhanced glass stats with icons -->
         <div class="mt-6 grid grid-cols-3 max-w-lg gap-3">
-          <div class="glass rounded-xl px-4 py-3 text-center text-sm"><div class="font-extrabold text-slate-900 dark:text-white">48–72h</div><div class="text-slate-600 dark:text-slate-400 dark:text-slate-300">Shortlists</div></div>
-          <div class="glass rounded-xl px-4 py-3 text-center text-sm"><div class="font-extrabold text-slate-900 dark:text-white">IT‑only</div><div class="text-slate-600 dark:text-slate-400 dark:text-slate-300">Focus</div></div>
-          <div class="glass rounded-xl px-4 py-3 text-center text-sm"><div class="font-extrabold text-slate-900 dark:text-white">Nationwide</div><div class="text-slate-600 dark:text-slate-400 dark:text-slate-300">Reach</div></div>
+          <div class="glass rounded-xl px-4 py-3 text-center text-sm group hover:bg-white/90 dark:hover:bg-slate-800/90 transition-all duration-200">
+            <svg class="w-5 h-5 text-brand-600 mx-auto mb-1 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <div class="font-extrabold text-slate-900 dark:text-white">48–72h</div>
+            <div class="text-slate-600 dark:text-slate-400 dark:text-slate-300">Shortlists</div>
+          </div>
+          <div class="glass rounded-xl px-4 py-3 text-center text-sm group hover:bg-white/90 dark:hover:bg-slate-800/90 transition-all duration-200">
+            <svg class="w-5 h-5 text-brand-600 mx-auto mb-1 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            <div class="font-extrabold text-slate-900 dark:text-white">IT‑only</div>
+            <div class="text-slate-600 dark:text-slate-400 dark:text-slate-300">Focus</div>
+          </div>
+          <div class="glass rounded-xl px-4 py-3 text-center text-sm group hover:bg-white/90 dark:hover:bg-slate-800/90 transition-all duration-200">
+            <svg class="w-5 h-5 text-brand-600 mx-auto mb-1 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064" />
+            </svg>
+            <div class="font-extrabold text-slate-900 dark:text-white">Nationwide</div>
+            <div class="text-slate-600 dark:text-slate-400 dark:text-slate-300">Reach</div>
+          </div>
         </div>
       </div>
       <div class="relative reveal">
         <div class="rounded-2xl glass p-5 shadow-soft">
-          <!-- Talent snapshots (replaces globe visual) -->
+          <!-- Enhanced Talent snapshots with profile images -->
           <div class="grid gap-3 mb-5">
-            <div class="p-4 rounded-xl bg-white/85 dark:bg-slate-900/70 flex items-center justify-between lift">
+            <div class="p-4 rounded-xl bg-white/85 dark:bg-slate-900/70 flex items-center justify-between lift group hover:bg-white/95 dark:hover:bg-slate-900/85 transition-all duration-200">
               <div class="flex items-center gap-3">
-                <div class="h-10 w-10 rounded-full bg-brand-600/10 text-brand-700 grid place-items-center font-extrabold">QA</div>
+                <div class="relative">
+                  <div class="h-10 w-10 rounded-full bg-gradient-to-br from-brand-100 to-brand-200 dark:from-brand-800 dark:to-brand-900 p-0.5">
+                    <div class="h-full w-full rounded-full bg-brand-600/10 text-brand-700 grid place-items-center font-extrabold text-sm">QA</div>
+                  </div>
+                  <!-- Replace placeholder: Add actual profile photo here -->
+                  <div class="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full border-2 border-white dark:border-slate-900" title="Available"></div>
+                </div>
                 <div>
-                  <div class="font-semibold text-slate-900">SDET (API / Playwright)</div>
+                  <div class="font-semibold text-slate-900 dark:text-white group-hover:text-brand-700 dark:group-hover:text-brand-300 transition-colors">SDET (API / Playwright)</div>
                   <div class="text-xs text-slate-500 dark:text-slate-400">8 yrs • Austin • 2‑week notice</div>
                 </div>
               </div>
-              <span class="text-xs px-2 py-1 rounded-full bg-brand-50 text-brand-700">Available</span>
+              <span class="text-xs px-2 py-1 rounded-full bg-brand-50 text-brand-700 group-hover:bg-brand-100 transition-colors">Available</span>
             </div>
-            <div class="p-4 rounded-xl bg-white/85 dark:bg-slate-900/70 flex items-center justify-between lift">
+            <div class="p-4 rounded-xl bg-white/85 dark:bg-slate-900/70 flex items-center justify-between lift group hover:bg-white/95 dark:hover:bg-slate-900/85 transition-all duration-200">
               <div class="flex items-center gap-3">
-                <div class="h-10 w-10 rounded-full bg-brand-600/10 text-brand-700 grid place-items-center font-extrabold">DV</div>
+                <div class="relative">
+                  <div class="h-10 w-10 rounded-full bg-gradient-to-br from-brand-100 to-brand-200 dark:from-brand-800 dark:to-brand-900 p-0.5">
+                    <div class="h-full w-full rounded-full bg-brand-600/10 text-brand-700 grid place-items-center font-extrabold text-xs">DV</div>
+                  </div>
+                  <!-- Replace placeholder: Add actual profile photo here -->
+                  <div class="absolute -top-1 -right-1 w-3 h-3 bg-blue-400 rounded-full border-2 border-white dark:border-slate-900" title="Top match"></div>
+                </div>
                 <div>
-                  <div class="font-semibold text-slate-900">DevOps Engineer (AWS/Terraform)</div>
+                  <div class="font-semibold text-slate-900 dark:text-white group-hover:text-brand-700 dark:group-hover:text-brand-300 transition-colors">DevOps Engineer (AWS/Terraform)</div>
                   <div class="text-xs text-slate-500 dark:text-slate-400">6 yrs • Plano • Immediate</div>
                 </div>
               </div>
-              <span class="text-xs px-2 py-1 rounded-full bg-brand-50 text-brand-700">Top match</span>
+              <span class="text-xs px-2 py-1 rounded-full bg-brand-50 text-brand-700 group-hover:bg-brand-100 transition-colors">Top match</span>
             </div>
-            <div class="p-4 rounded-xl bg-white/85 dark:bg-slate-900/70 flex items-center justify-between lift">
+            <div class="p-4 rounded-xl bg-white/85 dark:bg-slate-900/70 flex items-center justify-between lift group hover:bg-white/95 dark:hover:bg-slate-900/85 transition-all duration-200">
               <div class="flex items-center gap-3">
-                <div class="h-10 w-10 rounded-full bg-brand-600/10 text-brand-700 grid place-items-center font-extrabold">DE</div>
+                <div class="relative">
+                  <div class="h-10 w-10 rounded-full bg-gradient-to-br from-brand-100 to-brand-200 dark:from-brand-800 dark:to-brand-900 p-0.5">
+                    <div class="h-full w-full rounded-full bg-brand-600/10 text-brand-700 grid place-items-center font-extrabold text-xs">DE</div>
+                  </div>
+                  <!-- Replace placeholder: Add actual profile photo here -->
+                  <div class="absolute -top-1 -right-1 w-3 h-3 bg-orange-400 rounded-full border-2 border-white dark:border-slate-900" title="Hotlist"></div>
+                </div>
                 <div>
-                  <div class="font-semibold text-slate-900">Data Engineer (DBT / Snowflake)</div>
+                  <div class="font-semibold text-slate-900 dark:text-white group-hover:text-brand-700 dark:group-hover:text-brand-300 transition-colors">Data Engineer (DBT / Snowflake)</div>
                   <div class="text-xs text-slate-500 dark:text-slate-400">7 yrs • Remote • 1‑week notice</div>
                 </div>
               </div>
-              <span class="text-xs px-2 py-1 rounded-full bg-brand-50 text-brand-700">Hotlist</span>
+              <span class="text-xs px-2 py-1 rounded-full bg-brand-50 text-brand-700 group-hover:bg-brand-100 transition-colors">Hotlist</span>
             </div>
           </div>
+          
+          <!-- Enhanced service categories with modern icons -->
           <div class="grid grid-cols-2 gap-4 text-sm">
-            <div class="p-4 rounded-xl bg-white/60 dark:bg-slate-900/60"><div class="font-semibold text-slate-900">QA & SDET</div><div class="text-slate-600 dark:text-slate-400 dark:text-slate-300">Functional • Automation • API</div></div>
-            <div class="p-4 rounded-xl bg-white/60 dark:bg-slate-900/60"><div class="font-semibold text-slate-900">DevOps & Platform</div><div class="text-slate-600 dark:text-slate-400 dark:text-slate-300">K8s • CI/CD • Terraform</div></div>
-            <div class="p-4 rounded-xl bg-white/60 dark:bg-slate-900/60"><div class="font-semibold text-slate-900">Cloud & Security</div><div class="text-slate-600 dark:text-slate-400 dark:text-slate-300">AWS • Azure • GCP • SecOps</div></div>
-            <div class="p-4 rounded-xl bg-white/60 dark:bg-slate-900/60"><div class="font-semibold text-slate-900">Data & Analytics</div><div class="text-slate-600 dark:text-slate-400 dark:text-slate-300">ETL • Warehousing • BI</div></div>
+            <div class="p-4 rounded-xl bg-white/60 dark:bg-slate-900/60 group hover:bg-white/80 dark:hover:bg-slate-900/80 transition-all duration-200">
+              <div class="flex items-center gap-2 mb-2">
+                <svg class="w-4 h-4 text-brand-600 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div class="font-semibold text-slate-900 dark:text-white">QA & SDET</div>
+              </div>
+              <div class="text-slate-600 dark:text-slate-400 dark:text-slate-300">Functional • Automation • API</div>
+            </div>
+            <div class="p-4 rounded-xl bg-white/60 dark:bg-slate-900/60 group hover:bg-white/80 dark:hover:bg-slate-900/80 transition-all duration-200">
+              <div class="flex items-center gap-2 mb-2">
+                <svg class="w-4 h-4 text-brand-600 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <div class="font-semibold text-slate-900 dark:text-white">DevOps & Platform</div>
+              </div>
+              <div class="text-slate-600 dark:text-slate-400 dark:text-slate-300">K8s • CI/CD • Terraform</div>
+            </div>
+            <div class="p-4 rounded-xl bg-white/60 dark:bg-slate-900/60 group hover:bg-white/80 dark:hover:bg-slate-900/80 transition-all duration-200">
+              <div class="flex items-center gap-2 mb-2">
+                <svg class="w-4 h-4 text-brand-600 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+                </svg>
+                <div class="font-semibold text-slate-900 dark:text-white">Cloud & Security</div>
+              </div>
+              <div class="text-slate-600 dark:text-slate-400 dark:text-slate-300">AWS • Azure • GCP • SecOps</div>
+            </div>
+            <div class="p-4 rounded-xl bg-white/60 dark:bg-slate-900/60 group hover:bg-white/80 dark:hover:bg-slate-900/80 transition-all duration-200">
+              <div class="flex items-center gap-2 mb-2">
+                <svg class="w-4 h-4 text-brand-600 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+                <div class="font-semibold text-slate-900 dark:text-white">Data & Analytics</div>
+              </div>
+              <div class="text-slate-600 dark:text-slate-400 dark:text-slate-300">ETL • Warehousing • BI</div>
+            </div>
           </div>
           <div class="mt-4 text-xs text-slate-500 dark:text-slate-400">Plus: Network • Help Desk • PM/BA • Full‑Stack • Mobile</div>
         </div>
       </div>
     </div>
+
+    <!-- Photo Swap Instructions Comment (visible in source) -->
+    <!-- 
+    PHOTO SWAP INSTRUCTIONS:
+    
+    To replace placeholder images with your company photos:
+    
+    1. Business Meeting Card (top-right floating card):
+       - Replace the SVG in the first floating card with: <img src="your-business-meeting-photo.jpg" alt="Business Meeting" class="w-full h-full object-cover" />
+    
+    2. Tech Team Card (bottom-left floating card):
+       - Replace the SVG in the second floating card with: <img src="your-tech-team-photo.jpg" alt="Tech Team" class="w-full h-full object-cover" />
+    
+    3. Remote Work Card (top-left floating card):
+       - Replace the SVG in the third floating card with: <img src="your-remote-work-photo.jpg" alt="Remote Work" class="w-full h-full object-cover" />
+    
+    4. Diversity Team Card (bottom-right floating card):
+       - Replace the SVG in the fourth floating card with: <img src="your-diverse-team-photo.jpg" alt="Diverse Team" class="w-full h-full object-cover" />
+    
+    5. Talent Profile Photos:
+       - Replace the initials (QA, DV, DE) in the talent snapshots with: <img src="candidate-photo.jpg" alt="Candidate" class="w-full h-full object-cover rounded-full" />
+    
+    Recommended image specifications:
+    - Format: JPG or WebP for photos
+    - Floating cards: 400x300px minimum
+    - Profile photos: 80x80px minimum, square aspect ratio
+    - All images should be optimized for web (< 200KB each)
+    -->
   </section>
 
   <!-- Trust Bar -->
